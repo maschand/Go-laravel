@@ -1,13 +1,20 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/create-go-app/fiber-go-template/app/controllers"
+	"github.com/gofiber/fiber/v2"
+)
 
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello, World 👋!")
-	})
+	api := app.Group("/api")
+
+	//Example Api CRUD
+	api.Get("/test", controllers.GetRequest)
+	api.Post("/test", controllers.PostRequest)
+	api.Put("/test", controllers.PutRequest)
+	api.Delete("/test", controllers.DeleteRequest)
 
 	app.Listen(":3000")
 }
