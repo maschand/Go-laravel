@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/create-go-app/fiber-go-template/app/controllers"
 	"github.com/create-go-app/fiber-go-template/pkg/middleware"
+	"github.com/create-go-app/fiber-go-template/pkg/routes"
+	"github.com/create-go-app/fiber-go-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -17,16 +18,12 @@ func main() {
 	})
 
 	//Declare versioning or grouping
-	api := app.Group("/api")
+	routes.V1Routes(app)
 
 	//Declare Middleware
 	middleware.FiberMiddleware(app)
+	utils.LoadEnvironment()
 
-	//Example Api CRUD
-	api.Get("/test", controllers.GetRequest)
-	api.Post("/test", controllers.PostRequest)
-	api.Put("/test", controllers.PutRequest)
-	api.Delete("/test", controllers.DeleteRequest)
-
-	app.Listen(":3000")
+	//Start Server
+	utils.StartServerWithGracefulShutdown(app)
 }

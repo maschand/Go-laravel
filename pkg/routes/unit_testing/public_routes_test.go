@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"github.com/create-go-app/fiber-go-template/pkg/routes"
 	"net/http/httptest"
 	"testing"
 
@@ -41,7 +42,7 @@ func TestPublicRoutes(t *testing.T) {
 	app := fiber.New()
 
 	// Define routes.
-	PublicRoutes(app)
+	routes.PublicRoutes(app)
 
 	// Iterate through test single test cases
 	for _, test := range tests {

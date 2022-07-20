@@ -5,12 +5,13 @@ import (
 	"github.com/create-go-app/fiber-go-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
+	"os"
 	"time"
 )
 
 func GetRequest(context *fiber.Ctx) error {
 	return context.Status(fiber.StatusOK).JSON(fiber.Map{
-		"result": "Nice To Meet You and Me",
+		"result": os.Getenv("SERVER_HOST"),
 	})
 }
 

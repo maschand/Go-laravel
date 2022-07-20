@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 
-	"github.com/create-go-app/fiber-go-template/pkg/repository"
+	"github.com/create-go-app/fiber-go-template/pkg/const"
 )
 
 // GetCredentialsByRole func for getting credentials from a role name.
@@ -13,23 +13,23 @@ func GetCredentialsByRole(role string) ([]string, error) {
 
 	// Switch given role.
 	switch role {
-	case repository.AdminRoleName:
+	case _const.AdminRoleName:
 		// Admin credentials (all access).
 		credentials = []string{
-			repository.BookCreateCredential,
-			repository.BookUpdateCredential,
-			repository.BookDeleteCredential,
+			_const.BookCreateCredential,
+			_const.BookUpdateCredential,
+			_const.BookDeleteCredential,
 		}
-	case repository.ModeratorRoleName:
+	case _const.ModeratorRoleName:
 		// Moderator credentials (only book creation and update).
 		credentials = []string{
-			repository.BookCreateCredential,
-			repository.BookUpdateCredential,
+			_const.BookCreateCredential,
+			_const.BookUpdateCredential,
 		}
-	case repository.UserRoleName:
+	case _const.UserRoleName:
 		// Simple user credentials (only book creation).
 		credentials = []string{
-			repository.BookCreateCredential,
+			_const.BookCreateCredential,
 		}
 	default:
 		// Return error message.

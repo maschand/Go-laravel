@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/create-go-app/fiber-go-template/app/models"
-	"github.com/create-go-app/fiber-go-template/pkg/repository"
+	"github.com/create-go-app/fiber-go-template/pkg/const"
 	"github.com/create-go-app/fiber-go-template/pkg/utils"
 	"github.com/create-go-app/fiber-go-template/platform/database"
 	"github.com/gofiber/fiber/v2"
@@ -139,7 +139,7 @@ func CreateBook(c *fiber.Ctx) error {
 	}
 
 	// Set credential `book:create` from JWT data of current book.
-	credential := claims.Credentials[repository.BookCreateCredential]
+	credential := claims.Credentials[_const.BookCreateCredential]
 
 	// Only user with `book:create` credential can create a new book.
 	if !credential {
@@ -249,7 +249,7 @@ func UpdateBook(c *fiber.Ctx) error {
 	}
 
 	// Set credential `book:update` from JWT data of current book.
-	credential := claims.Credentials[repository.BookUpdateCredential]
+	credential := claims.Credentials[_const.BookUpdateCredential]
 
 	// Only book creator with `book:update` credential can update his book.
 	if !credential {
@@ -372,7 +372,7 @@ func DeleteBook(c *fiber.Ctx) error {
 	}
 
 	// Set credential `book:delete` from JWT data of current book.
-	credential := claims.Credentials[repository.BookDeleteCredential]
+	credential := claims.Credentials[_const.BookDeleteCredential]
 
 	// Only book creator with `book:delete` credential can delete his book.
 	if !credential {
