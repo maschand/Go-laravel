@@ -2,12 +2,15 @@ package controllers
 
 import (
 	"github.com/create-go-app/fiber-go-template/app/models"
+	"github.com/create-go-app/fiber-go-template/app/services"
 	"github.com/create-go-app/fiber-go-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"os"
 	"time"
 )
+
+type postRepository struct {}
 
 func GetRequest(context *fiber.Ctx) error {
 	return context.Status(fiber.StatusOK).JSON(fiber.Map{
@@ -107,4 +110,12 @@ func DeleteRequest(context *fiber.Ctx) error {
 		"error":  false,
 		"result": "Successfull Delete Your Data",
 	})
+}
+
+func TestPattern(context *fiber.Ctx) error {
+	p := postRepository{}
+	post := services.Service{
+		Post: p
+	}
+
 }
