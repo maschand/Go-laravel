@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"github.com/create-go-app/fiber-go-template/app/interfaces"
-	"github.com/create-go-app/fiber-go-template/app/models"
+	"github.com/chand19-af/digitels-template/app/interfaces"
+	"github.com/chand19-af/digitels-template/app/models"
 )
 
 type Post struct {

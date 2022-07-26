@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/create-go-app/fiber-go-template/app/models"
-	"github.com/create-go-app/fiber-go-template/pkg/utils"
-	"github.com/create-go-app/fiber-go-template/platform/cache"
-	"github.com/create-go-app/fiber-go-template/platform/database"
+	"github.com/chand19-af/digitels-template/app/models"
+	"github.com/chand19-af/digitels-template/pkg/utils"
+	"github.com/chand19-af/digitels-template/platform/cache"
+	"github.com/chand19-af/digitels-template/platform/database"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"

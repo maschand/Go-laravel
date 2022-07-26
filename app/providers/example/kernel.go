@@ -1,6 +1,3 @@
-//go:build wireinject
-// +build wireinject
-
 package provider_test
 
 import (

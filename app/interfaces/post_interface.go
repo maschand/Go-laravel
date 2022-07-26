@@ -1,6 +1,6 @@
 package interfaces
 
-import "github.com/create-go-app/fiber-go-template/app/models"
+import "github.com/chand19-af/digitels-template/app/models"
 
 type (
 	PostInterface interface {
