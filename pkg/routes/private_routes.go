@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"github.com/chand19-af/digitels-template/app/controllers"
-	"github.com/chand19-af/digitels-template/pkg/middleware"
 	"github.com/gofiber/fiber/v2"
+	"gitlab.com/d6825/golang_template/app/controllers"
+	"gitlab.com/d6825/golang_template/pkg/middleware"
 )
 
 // PrivateRoutes func for describe group of private routes.

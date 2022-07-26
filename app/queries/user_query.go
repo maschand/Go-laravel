@@ -1,9 +1,9 @@
 package queries
 
 import (
-	"github.com/chand19-af/digitels-template/app/models"
 	"github.com/google/uuid"
 	"github.com/jmoiron/sqlx"
+	"gitlab.com/d6825/golang_template/app/models"
 )
 
 // UserQueries struct for queries from User model.

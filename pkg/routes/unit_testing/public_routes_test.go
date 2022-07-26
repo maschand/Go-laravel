@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/chand19-af/digitels-template/pkg/routes"
+	"gitlab.com/d6825/golang_template/pkg/routes"
 	"net/http/httptest"
 	"testing"
 

@@ -4,11 +4,11 @@
 package providers
 
 import (
-	"github.com/chand19-af/digitels-template/app/controllers"
-	"github.com/chand19-af/digitels-template/app/repositories"
-	"github.com/chand19-af/digitels-template/app/services"
-	"github.com/chand19-af/digitels-template/platform/database"
 	"github.com/google/wire"
+	"gitlab.com/d6825/golang_template/app/controllers"
+	"gitlab.com/d6825/golang_template/app/repositories"
+	"gitlab.com/d6825/golang_template/app/services"
+	"gitlab.com/d6825/golang_template/platform/database"
 )
 
 var hotelSet = wire.NewSet(

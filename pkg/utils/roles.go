@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 
-	"github.com/chand19-af/digitels-template/pkg/const"
+	"gitlab.com/d6825/golang_template/pkg/const"
 )
 
 // VerifyRole func for verifying a given role.

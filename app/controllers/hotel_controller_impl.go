@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"github.com/chand19-af/digitels-template/app/helpers"
-	"github.com/chand19-af/digitels-template/app/models"
-	"github.com/chand19-af/digitels-template/app/services"
 	"github.com/gofiber/fiber/v2"
+	"gitlab.com/d6825/golang_template/app/helpers"
+	"gitlab.com/d6825/golang_template/app/models"
+	"gitlab.com/d6825/golang_template/app/services"
 	"strconv"
 )
 

@@ -1,17 +1,17 @@
 package routes
 
 import (
-	"github.com/chand19-af/digitels-template/pkg/routes"
+	"gitlab.com/d6825/golang_template/pkg/routes"
 	"io"
 	"net/http/httptest"
 	"strings"
 	"testing"
 
-	"github.com/chand19-af/digitels-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"github.com/joho/godotenv"
 	"github.com/stretchr/testify/assert"
+	"gitlab.com/d6825/golang_template/pkg/utils"
 )
 
 func TestPrivateRoutes(t *testing.T) {

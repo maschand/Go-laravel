@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	"github.com/chand19-af/digitels-template/app/models"
+	"gitlab.com/d6825/golang_template/app/models"
 	"gorm.io/gorm"
 )
 

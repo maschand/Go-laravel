@@ -4,7 +4,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/chand19-af/digitels-template/pkg/utils"
+	"gitlab.com/d6825/golang_template/pkg/utils"
 
 	"github.com/go-redis/redis/v8"
 )

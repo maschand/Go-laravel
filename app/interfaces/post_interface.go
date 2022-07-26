@@ -1,6 +1,6 @@
 package interfaces
 
-import "github.com/chand19-af/digitels-template/app/models"
+import "gitlab.com/d6825/golang_template/app/models"
 
 type (
 	PostInterface interface {

@@ -2,10 +2,10 @@ package tests
 
 import (
 	"fmt"
-	"github.com/chand19-af/digitels-template/app/models"
-	"github.com/chand19-af/digitels-template/platform/database"
-	"github.com/chand19-af/digitels-template/platform/migrations"
 	"github.com/joho/godotenv"
+	"gitlab.com/d6825/golang_template/app/models"
+	"gitlab.com/d6825/golang_template/platform/database"
+	"gitlab.com/d6825/golang_template/platform/migrations"
 	"gorm.io/gorm"
 	"log"
 	"testing"

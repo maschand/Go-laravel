@@ -1,4 +1,4 @@
-module github.com/chand19-af/digitels-template
+module gitlab.com/d6825/golang_template
 
 go 1.17
 

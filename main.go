@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/chand19-af/digitels-template/pkg/middleware"
-	"github.com/chand19-af/digitels-template/pkg/routes"
-	"github.com/chand19-af/digitels-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
+	"gitlab.com/d6825/golang_template/pkg/middleware"
+	"gitlab.com/d6825/golang_template/pkg/routes"
+	"gitlab.com/d6825/golang_template/pkg/utils"
 )
 
 func main() {

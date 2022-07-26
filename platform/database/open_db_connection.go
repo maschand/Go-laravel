@@ -3,8 +3,8 @@ package database
 import (
 	"os"
 
-	"github.com/chand19-af/digitels-template/app/queries"
 	"github.com/jmoiron/sqlx"
+	"gitlab.com/d6825/golang_template/app/queries"
 )
 
 // Queries struct for collect all app queries.

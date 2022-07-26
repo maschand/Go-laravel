@@ -1,8 +1,8 @@
 package repositories
 
 import (
-	"github.com/chand19-af/digitels-template/app/models"
 	"github.com/gofiber/fiber/v2"
+	"gitlab.com/d6825/golang_template/app/models"
 	"gorm.io/gorm"
 )
 
