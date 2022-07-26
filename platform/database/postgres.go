@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/create-go-app/fiber-go-template/pkg/utils"
+	"github.com/chand19-af/digitels-template/pkg/utils"
 
 	"github.com/jmoiron/sqlx"
 

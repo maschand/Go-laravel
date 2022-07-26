@@ -3,7 +3,7 @@ package database
 import (
 	"os"
 
-	"github.com/create-go-app/fiber-go-template/app/queries"
+	"github.com/chand19-af/digitels-template/app/queries"
 	"github.com/jmoiron/sqlx"
 )
 

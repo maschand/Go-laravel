@@ -2,11 +2,13 @@ package database
 
 import (
 	"fmt"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
 	"os"
 	"strconv"
 	"time"
 
-	"github.com/create-go-app/fiber-go-template/pkg/utils"
+	"github.com/chand19-af/digitels-template/pkg/utils"
 
 	"github.com/jmoiron/sqlx"
 
@@ -44,6 +46,16 @@ func MysqlConnection() (*sqlx.DB, error) {
 	if err := db.Ping(); err != nil {
 		defer db.Close() // close database connection
 		return nil, fmt.Errorf("error, not sent ping to database, %w", err)
+	}
+
+	return db, nil
+}
+
+func GormMysqlConnection() (*gorm.DB, error) {
+	dsn := os.Getenv("GORM_MYSQL")
+	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	if err != nil {
+		return nil, err
 	}
 
 	return db, nil
