@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/create-go-app/fiber-go-template/app/models"
-	"github.com/create-go-app/fiber-go-template/app/repositories"
+	"github.com/chand19-af/digitels-template/app/models"
+	"github.com/chand19-af/digitels-template/app/repositories"
 )
 
 func getPost() models.Post {
