@@ -4,36 +4,26 @@
 package providers
 
 import (
+	"github.com/chand19-af/digitels-template/app/controllers"
 	"github.com/chand19-af/digitels-template/app/repositories"
 	"github.com/chand19-af/digitels-template/app/services"
+	"github.com/chand19-af/digitels-template/platform/database"
 	"github.com/google/wire"
 )
 
-var hotelService = wire.NewSet(
-	services.NewHotelServiceImpl,
-	wire.Bind(new(services.Hotel), new(*services.HotelServiceImpl)),
+var hotelSet = wire.NewSet(
+	repositories.NewHotelRepository,
+	wire.Bind(new(repositories.HotelRepository), new(*repositories.HotelRepositoryImpl)),
+	services.NewHotelService,
+	wire.Bind(new(services.HotelService), new(*services.HotelServiceImpl)),
+	controllers.NewHotelController,
+	wire.Bind(new(controllers.HotelControlller), new(*controllers.HotelControllerImp)),
 )
 
-var hotelRepository = wire.NewSet(
-	repositories.NewHotelRepositoryImpl,
-	wire.Bind(new(repositories.Hotel), new(*repositories.HotelRepositoryImpl)),
-)
-
-func InitializedHotelRepository() *repositories.HotelRepository {
+func InitializedServer() *controllers.HotelControllerImp {
 	wire.Build(
-		hotelRepository,
-		repositories.NewHotelRepository,
-	)
-
-	return nil
-}
-
-func InitializedHotelService() *services.HotelService {
-	wire.Build(
-		hotelService,
-		hotelRepository,
-		repositories.NewHotelRepository,
-		services.NewHotelService,
+		database.GormMysqlConnection,
+		hotelSet,
 	)
 
 	return nil
