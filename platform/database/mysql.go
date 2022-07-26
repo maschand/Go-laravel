@@ -51,12 +51,12 @@ func MysqlConnection() (*sqlx.DB, error) {
 	return db, nil
 }
 
-func GormMysqlConnection() (*gorm.DB, error) {
+func GormMysqlConnection() *gorm.DB {
 	dsn := os.Getenv("GORM_MYSQL")
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
-		return nil, err
+		panic(err)
 	}
 
-	return db, nil
+	return db
 }
