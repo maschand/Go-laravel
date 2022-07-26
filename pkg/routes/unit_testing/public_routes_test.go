@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/create-go-app/fiber-go-template/pkg/routes"
+	"github.com/chand19-af/digitels-template/pkg/routes"
 	"net/http/httptest"
 	"testing"
 

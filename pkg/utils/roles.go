@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 
-	"github.com/create-go-app/fiber-go-template/pkg/const"
+	"github.com/chand19-af/digitels-template/pkg/const"
 )
 
 // VerifyRole func for verifying a given role.

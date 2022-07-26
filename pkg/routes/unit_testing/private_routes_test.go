@@ -1,13 +1,13 @@
 package routes
 
 import (
-	"github.com/create-go-app/fiber-go-template/pkg/routes"
+	"github.com/chand19-af/digitels-template/pkg/routes"
 	"io"
 	"net/http/httptest"
 	"strings"
 	"testing"
 
-	"github.com/create-go-app/fiber-go-template/pkg/utils"
+	"github.com/chand19-af/digitels-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 	"github.com/joho/godotenv"
