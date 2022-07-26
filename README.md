@@ -1,4 +1,4 @@
-# Fiber backend template for [Create Go App CLI](https://github.com/create-go-app/cli)
+# Fiber backend DIGITELS template for [Create Go App CLI](https://gitlab.com/d6825/golang_template)
 
 <img src="https://img.shields.io/badge/Go-1.17+-00ADD8?style=for-the-badge&logo=go" alt="go version" />&nbsp;<a href="https://goreportcard.com/report/github.com/chand19-af/digitels-template" target="_blank"><img src="https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none" alt="go report" /></a>&nbsp;<img src="https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
 
@@ -9,12 +9,7 @@
 1. Create a new project with Fiber:
 
 ```bash
-cgapp create
-
-# Choose a backend framework:
-#   net/http
-# > fiber
-#   chi
+git clone git@gitlab.com:d6825/golang_template.git
 ```
 
 2. Rename `.env.example` to `.env` and fill it with your environment values.
@@ -25,16 +20,8 @@ cgapp create
    - [github.com/securego/gosec](https://github.com/securego/gosec) for checking Go security issues
    - [github.com/go-critic/go-critic](https://github.com/go-critic/go-critic) for checking Go the best practice issues
    - [github.com/golangci/golangci-lint](https://github.com/golangci/golangci-lint) for checking Go linter issues
-
-4. Run project by this command:
-
-```bash
-make docker.run
-```
-
-5. Go to API Docs page (Swagger): [127.0.0.1:5000/swagger/index.html](http://127.0.0.1:5000/swagger/index.html)
-
-![Screenshot](https://user-images.githubusercontent.com/11155743/112715187-07dab100-8ef0-11eb-97ea-68d34f2178f6.png)
+   - [gorm.io/gorm](gorm.io/gorm) for checking GORM issues
+   - [github.com/robfig/cron/v3](github.com/robfig/cron/v3) for checking Go cron issues
 
 ## 📦 Used packages
 
@@ -63,6 +50,12 @@ make docker.run
 - `./app/controllers` folder for functional controllers (used in routes)
 - `./app/models` folder for describe business models and methods of your project
 - `./app/queries` folder for describe queries for models of your project
+- `./app/helpers` folder for describe helpers of your project
+- `./app/interfaces` folder for describe interfaces for repository, service, and controller of your project
+- `./app/providers` folder for describe providers and binding interface of your project
+- `./app/services` folder for describe services for controller of your project
+- `./app/repositories` folder for describe repository for service of your project
+- `./app/tests` folder for describe unit testing for your project
 
 ### ./docs
 
@@ -74,7 +67,7 @@ make docker.run
 
 - `./pkg/configs` folder for configuration functions
 - `./pkg/middleware` folder for add middleware (Fiber built-in and yours)
-- `./pkg/repository` folder for describe `const` of your project
+- `./pkg/const` folder for describe `const` of your project
 - `./pkg/routes` folder for describe routes of your project
 - `./pkg/utils` folder with utility functions (server starter, error checker, etc)
 
@@ -97,35 +90,39 @@ make docker.run
 STAGE_STATUS="dev"
 
 # Server settings:
-SERVER_HOST="0.0.0.0"
-SERVER_PORT=5000
+SERVER_HOST="127.0.0.1"
+SERVER_PORT=3000
 SERVER_READ_TIMEOUT=60
 
 # JWT settings:
-JWT_SECRET_KEY="secret"
+JWT_SECRET_KEY="\secret"
 JWT_SECRET_KEY_EXPIRE_MINUTES_COUNT=15
 JWT_REFRESH_KEY="refresh"
 JWT_REFRESH_KEY_EXPIRE_HOURS_COUNT=720
 
 # Database settings:
-DB_TYPE="pgx"   # pgx or mysql
-DB_HOST="cgapp-postgres"
-DB_PORT=5432
-DB_USER="postgres"
-DB_PASSWORD="password"
-DB_NAME="postgres"
+DB_TYPE="mysql"   # pgx or mysql
+DB_HOST="127.0.0.0"
+DB_PORT=3306
+DB_USER="root"
+DB_PASSWORD=""
+DB_NAME="digitels_api"
 DB_SSL_MODE="disable"
 DB_MAX_CONNECTIONS=100
 DB_MAX_IDLE_CONNECTIONS=10
 DB_MAX_LIFETIME_CONNECTIONS=2
+
+# Gorm settings:
+GORM_MYSQL="root:@tcp(127.0.0.1:3306)/midtrans?charset=utf8mb4&parseTime=True&loc=Local"
 
 # Redis settings:
 REDIS_HOST="cgapp-redis"
 REDIS_PORT=6379
 REDIS_PASSWORD=""
 REDIS_DB_NUMBER=0
-```
+
+# Goose settings:
+GOOSE_DRIVER="mysql"
 
 ## ⚠️ License
 
-Apache 2.0 &copy; [Vic Shóstak](https://shostak.dev/) & [True web artisans](https://1wa.co/).
