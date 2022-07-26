@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/create-go-app/fiber-go-template/pkg/middleware"
-	"github.com/create-go-app/fiber-go-template/pkg/routes"
-	"github.com/create-go-app/fiber-go-template/pkg/utils"
+	"github.com/chand19-af/digitels-template/pkg/middleware"
+	"github.com/chand19-af/digitels-template/pkg/routes"
+	"github.com/chand19-af/digitels-template/pkg/utils"
 	"github.com/gofiber/fiber/v2"
 )
 
