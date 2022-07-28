@@ -1,8 +1,8 @@
-# Fiber backend DIGITELS template for [Create Go App CLI](https://gitlab.com/d6825/golang_template)
+# Fiber backend template for [Create Go App CLI](https://github.com/chand19-af/Go-laravel)
 
 <img src="https://img.shields.io/badge/Go-1.17+-00ADD8?style=for-the-badge&logo=go" alt="go version" />&nbsp;<a href="https://goreportcard.com/report/gitlab.com/d6825/golang_template" target="_blank"><img src="https://img.shields.io/badge/Go_report-A+-success?style=for-the-badge&logo=none" alt="go report" /></a>&nbsp;<img src="https://img.shields.io/badge/license-Apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
 
-[Fiber](https://gofiber.io/) is an Express.js inspired web framework build on top of Fasthttp, the fastest HTTP engine for Go. Designed to ease things up for **fast** development with **zero memory allocation** and **performance** in mind.
+[Go-laravel](https://github.com/chand19-af/Go-laravel) is an Laravel Framework inspired backend template build on top of Fasthttp, the fastest HTTP engine for Go. Designed to ease things up for **fast** development with **zero memory allocation** and **performance** in mind.
 
 ## ⚡️ Quick start
 
